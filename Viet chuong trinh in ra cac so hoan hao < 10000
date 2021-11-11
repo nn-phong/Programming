@@ -1,0 +1,29 @@
+#include<stdio.h>
+
+int main()
+
+{
+
+	for(int n = 1; n <= 10000; n++) // Xét các số từ 1 -> 10000
+
+		{
+
+			int tongUS = 0;		// Biến chứa tổng các ước số của n (không bao gồm n). Phải khởi tạo 
+                                                        // tổng = 0 ở mỗi lần xét giá trị mới của n.
+
+			// Tìm các ước số của n và bé hơn n (-> chỉ cần xét trong đoạn [1, n/2]):
+
+			for(int i = 1; i <= n/2; i++)
+
+				if(n % i == 0)  // Nếu đúng -> i là ước số của n -> cộng i vào biến tongUS
+
+					tongUS += i;
+
+			// Sau khi kết thúc vòng lặp, so sánh tổng các ước số với n, nếu bằng nhau thì
+                        // n là số hoàn hảo -> in ra n:
+
+			if(tongUS == n) printf("%5d la mot so hoan hao.\n", n);
+
+		}
+
+}
