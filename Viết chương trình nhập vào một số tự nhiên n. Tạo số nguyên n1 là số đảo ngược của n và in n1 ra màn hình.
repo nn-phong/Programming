@@ -1,0 +1,28 @@
+/*
+Viết chương trình in ra số đảo ngược
+*/
+
+#include <stdio.h>
+
+int main()
+{
+    unsigned int n;
+    int n1 = 0;
+    
+    do
+    {
+    printf("\nNhap n:");
+    scanf("%d", &n);
+    }
+    while(n < 0 && printf("\nLoi !!"));
+    
+     do
+    {
+    n1 = n1 * 10 + n % 10;
+    n /= 10;
+    }
+    while (n != 0);
+   
+    printf("So dao nguoc = %d", n1);
+    return 0;
+}
