@@ -1,0 +1,41 @@
+/*
+
+Chương trình in ra hình tam giac n dòng ký tự '*'
+
+vd, n = 3:
+
+*
+
+* *
+
+* * *
+
+*/
+
+#include<stdio.h>
+
+int main()
+
+{
+
+	int n;
+
+	printf("Nhap so dong:");
+
+	scanf("%d", &n);
+
+	for(int i = 1; i <= n; i++) // Xét các dòng i từ 1 đến n
+
+		{
+
+			// Ở dòng thứ i, in ra i ký tự '*'
+
+			for(int j = 1; j <= i; j++) printf("* ");
+
+			// Sau khi in ra i ký tự '*', xuống dòng:
+
+			printf("\n");
+
+		}
+
+}
