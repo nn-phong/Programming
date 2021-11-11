@@ -1,0 +1,29 @@
+/*
+Một loại vi trùng cứ sau mỗi giờ lại nhân đôi. Hỏi ban đầu có n con vi trùng thì sau h giờ số lượng là bao nhiêu?
+
+*Input:
+- Số lượng vi trùng ban đầu (con)
+- Khoảng thời gian (giờ).
+* Output: Số lượng vi trùng sau khoảng thời gian đã cho.
+*/
+#include<stdio.h>
+
+const int HSNHAN = 2;   // Tốc độ nhân bản
+
+int main()
+{
+   int sovtbandau, sogio, i;
+   long tongsovt = 0;
+   
+   printf("Nhap so vi trung ban dau:");
+   scanf("%d", &sovtbandau);
+   printf("Nhap so gio:");
+   scanf("%d", &sogio);
+   
+   for ( i = 0; i < sogio; i++)
+   {
+       tongsovt = sovtbandau * HSNHAN;
+       sovtbandau = tongsovt;
+   }
+   printf("Tong so vi trung = %d", tongsovt);
+}
