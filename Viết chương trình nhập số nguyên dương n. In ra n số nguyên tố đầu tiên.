@@ -1,0 +1,32 @@
+/*
+Viết chương trình in n số nguyên tố đầu tiên.
+*/
+#include<stdio.h>
+#include<math.h>
+
+int soNT(int n)
+{
+    for (int i = 2; i <= sqrt(n); i++)
+    {
+    if (n%i==0)
+    return 0;
+    }
+    return n>1;
+}
+
+int main()
+{
+    int n;
+    printf("Nhap n: ");
+    scanf("%d", &n);
+    int i = 0, count = 0;
+    while (count<n)
+    {
+        if(soNT(i))
+        {
+            printf("%d\n",i);
+            ++count;
+        }
+        i++;
+    }
+}
