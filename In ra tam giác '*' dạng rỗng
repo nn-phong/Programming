@@ -1,0 +1,50 @@
+In ra tam giac '*' rong
+
+vd: n = 4
+
+
+
+*
+
+*  *
+
+*     * 
+
+* * * * *
+
+
+
+*/
+
+#include<stdio.h>
+
+int main()
+
+{
+
+	int n, i, j; 
+
+	do{
+
+		printf("Nhap so dong:");
+
+		scanf("%d", &n);
+
+	} while(n<3 || n > 20);
+
+	printf("*\n"); // In '*' trên đỉnh tam giác
+
+	for(i=1; i < n-1; i++) // In ra n-2 dòng 
+
+	{
+
+		printf("*");  // In '*' bên trái
+
+		for(j=0; j < 2*i-1; j++) printf(" "); // In ra các khoảng trắng
+
+		printf("*\n"); // In '*' bên phải, sau đó xuống dòng
+
+	}
+
+	for(j=0; j < n; j++) printf("* "); // In cạnh đáy
+
